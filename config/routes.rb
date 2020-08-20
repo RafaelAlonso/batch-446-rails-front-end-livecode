@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :cocktails, only: [:index]
+  resources :cocktails, only: [:index, :show]
   # 7 rotas do apocalipse (CRUD)
   # index
   # show
