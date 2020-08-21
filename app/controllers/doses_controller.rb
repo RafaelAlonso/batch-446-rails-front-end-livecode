@@ -14,12 +14,17 @@ class DosesController < ApplicationController
       # mando ele para o show
       redirect_to cocktail_path(@cocktail.id)
     else
+      # senao, mostro o form do new de novo pro user arrumar
+      # o que fez de errado
       render :new
     end
   end
 
   private
 
+  # receita de bolo
+  # filtra quais são os campos que podemos deixar passar para
+  # a criacao de uma dose
   def dose_params
     params.require(:dose).permit(:description, :ingredient_id)
   end
